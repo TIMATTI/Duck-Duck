@@ -1,0 +1,202 @@
+@keyframes fly1 {
+    0% {
+        left: -5%;
+        top: 50%;
+    }
+    25% {
+        left: 25%;
+        top: 75%;
+    }
+    75% {
+        left: 75%;
+        top: 5%;
+    }
+    100% {
+        left: 100%;
+        top: 0%;
+    }
+}
+
+@keyframes fly2 {
+    0% {
+        left: -10%;
+        top: 5%;
+    }
+    25% {
+        left: 20%;
+        top: 20%;
+    }
+    75% {
+        left: 70%;
+        top: 40%;
+    }
+    100% {
+        left: 100%;
+        top: 5%;
+    }
+}
+
+@keyframes fly3 {
+    0% {
+        left: -15%;
+        top: 60%;
+    }
+    25% {
+        left: 40%;
+        top: 80%;
+    }
+    75% {
+        left: 80%;
+        top: 40%;
+    }
+    100% {
+        left: 100%;
+        top: 90%;
+    }
+}
+
+@keyframes fly4 {
+    0% {
+        left: -10%;
+        top: 70%;
+    }
+    30% {
+        left: 50%;
+        top: 90%;
+    }
+    75% {
+        left: 70%;
+        top: 60%;
+    }
+    100% {
+        left: 100%;
+        top: 50%;
+    }
+}
+
+@keyframes fly5 {
+    0% {
+        left: -5%;
+        top: 50%;
+    }
+    25% {
+        left: 10%;
+        top: 75%;
+    }
+    75% {
+        left: 75%;
+        top: 5%;
+    }
+    100% {
+        left: 100%;
+        top: 60%;
+    }
+}
+
+@keyframes fly6 {
+    0% {
+        left: -5%;
+        top: 50%;
+    }
+    25% {
+        left: 15%;
+        top: 50%;
+    }
+    75% {
+        left: 75%;
+        top: 50%;
+    }
+    100% {
+        left: 100%;
+        top: 80%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;    
+}
+
+body {
+    min-height: 100%;
+    counter-reset: killsDuck;
+    background-image: url("img/Games_Duck_Hunt_Nintendo_Dendy_Nes_025749_9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 bottom;
+    position: relative;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+input[type="checkbox"]:checked {counter-increment: killsDuck;}
+
+input[type="checkbox"]:checked+label {display: none;}
+
+.count::after {content: counter(killsDuck);}
+
+.count {
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.duck {
+    position: relative;
+    width: 62px;
+    height: 59px;
+    overflow: hidden;
+    left: -100px;
+    top: 50%;
+}
+
+input {
+    position: absolute;
+    left: -80px;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/duck_hunt_bird_big2.gif);
+    cursor: crosshair;
+}
+
+.duck1 {
+    position: absolute;
+    animation: fly1 10s both;
+}
+
+.duck2 {
+    position: absolute;
+    animation: fly2 10s both;
+}
+
+.duck3 {
+    position: absolute;
+    animation: fly3 5s both;
+}
+
+.duck4 {
+    position: absolute;
+    animation: fly4 10s both;
+}
+
+.duck5 {
+    position: absolute;
+    animation: fly5 7s both;
+}
+
+.duck6 {
+    position: absolute;
+    animation: fly6 7s both;
+}
